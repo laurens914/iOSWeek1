@@ -4,22 +4,24 @@ import UIKit
 
 var solarSystem = ["Mercury","Venus","Mars","Jupiter","Saturn", "Uranus", "Neptune"]
 solarSystem
-func includeEarth()
+func includeEarth(array: [String]) -> [String]
 {
-    if solarSystem.contains("Earth"){
-    print(solarSystem)
+    if array.contains("Earth"){
+    return array
     } else {
-   solarSystem.append("Earth")
-        print(solarSystem)
+        var withEarth = array
+        withEarth.append("Earth")
+        return withEarth
     }
 }
-includeEarth()
+includeEarth
 
 
 //Question 2:Use reduce to create single string from the above array. [“Venus”, “Earth”] would produce “Venus, Earth”
-
+//let planetString = solarSystem.reduce("") [ (planet, result) -> String in "\planet"]
 let evString = solarSystem.reduce("") {"\($0)  \($1),"}
 evString
+
 
 
 //Question 3:
@@ -30,9 +32,11 @@ var seahawksPlayers: [Int : String] = [3 : "Wilson", 4 : "Hauschka", 24 : "Lynch
 
 var groceryList = ["fruit" : "Apples", "vegitables" : "Carrots", "cheese" : "Cheddar", "cookies" : "Oreos"]
 
- groceryList.filter { (cookies) -> Bool in 
+func groceries (){
+groceryList.filter { (cookies) -> Bool in
     let values = groceryList.values
     return values.contains("Oreos")
+    }
 }
 
 
