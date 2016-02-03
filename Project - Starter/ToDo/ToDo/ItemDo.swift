@@ -28,7 +28,7 @@ extension ItemDo
     {
         self.checkList.append(object)
         print("object added")
-        print("object now has \(self.checkList.count) item")
+        print("object now has \(self.checkList.count) items")
     }
     func clearItem(object: Object)
     {
