@@ -35,6 +35,18 @@ for character in name.characters {
 print(reverseName)
 
 
+//bonus:
+
+func hello (input:String) -> String {
+    return input(hello)
+}
+
+func greeting(personName:String){
+    
+}
+
+
+
 
 
 
