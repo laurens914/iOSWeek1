@@ -14,20 +14,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad fired")
-        let task = ToDoItem(name: "test", date: "2-2-2016", moreInfo: "testing functionality")
-        let task2 = ToDoItem(name: "make dinner", date: "2-14-2016", moreInfo: "bring the salad")
-        
-        ItemStore.shared.addItem(task)
-        ItemStore.shared.addItem(task2)
-        
-        for task in ItemStore.shared.viewList()
-        {
-            print(task.name)
-            print(task.date)
-            print(task.moreInfo)
-        }
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -45,16 +31,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func configureCell(indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("todoCell", forIndexPath: indexPath)
         
-        // Missing model.
-        // Missing setup.
-        
+        //let checkList = ItemStore.shared.objectAtIndex(indexPath.row)
+        //cell.textLabel?.text = checkList?.moreInfo
         return cell
     }
     
     // MARK: UITableViewDataSource
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 0// ItemStore.shared.count()
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -69,8 +54,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            
-            // Missing model.
+            let selectedTask = indexPath.row
+            // ItemStore.shared.removeObjectAtIndexPath(selectedTask)
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         }

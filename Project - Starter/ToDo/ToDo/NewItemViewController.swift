@@ -29,7 +29,10 @@ class NewItemViewController: UIViewController {
         guard let navigationController = self.navigationController else { fatalError("Where did Navigation Controller go? Error origin: \(__FUNCTION__)") }
         guard let description = self.todoTextField.text else { return }
         
-        // Missing model.
+        let date = ""
+        
+        let task = ToDoItem(name: description, date: date)
+        // ItemStore.shared.addItem(task)
         
         navigationController.popViewControllerAnimated(true)
     }

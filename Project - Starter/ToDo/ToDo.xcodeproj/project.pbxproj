@@ -13,9 +13,10 @@
 		1CA2F7121C3C2B6400757A21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA2F7111C3C2B6400757A21 /* Assets.xcassets */; };
 		1CA2F7151C3C2B6400757A21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA2F7131C3C2B6400757A21 /* LaunchScreen.storyboard */; };
 		1CA2F7281C3DB2C200757A21 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2F7271C3DB2C200757A21 /* NewItemViewController.swift */; };
-		897D5AC31C6296A800A93EF0 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897D5AC21C6296A800A93EF0 /* ToDo.swift */; };
-		897D5AC51C62997800A93EF0 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897D5AC41C62997800A93EF0 /* ItemStore.swift */; };
+		897D5AC31C6296A800A93EF0 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897D5AC21C6296A800A93EF0 /* ToDoItem.swift */; };
 		897D5AC71C629A3500A93EF0 /* ItemDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897D5AC61C629A3500A93EF0 /* ItemDo.swift */; };
+		89B79C681C63D3420056DE9F /* Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B79C671C63D3420056DE9F /* Additions.swift */; };
+		89ED124C1C63F67B00ACB44D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED124B1C63F67B00ACB44D /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +28,10 @@
 		1CA2F7141C3C2B6400757A21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CA2F7161C3C2B6400757A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CA2F7271C3DB2C200757A21 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
-		897D5AC21C6296A800A93EF0 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
-		897D5AC41C62997800A93EF0 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		897D5AC21C6296A800A93EF0 /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		897D5AC61C629A3500A93EF0 /* ItemDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDo.swift; sourceTree = "<group>"; };
+		89B79C671C63D3420056DE9F /* Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Additions.swift; sourceTree = "<group>"; };
+		89ED124B1C63F67B00ACB44D /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +119,10 @@
 		897D5AC11C62968B00A93EF0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				897D5AC21C6296A800A93EF0 /* ToDo.swift */,
-				897D5AC41C62997800A93EF0 /* ItemStore.swift */,
+				897D5AC21C6296A800A93EF0 /* ToDoItem.swift */,
+				89B79C671C63D3420056DE9F /* Additions.swift */,
 				897D5AC61C629A3500A93EF0 /* ItemDo.swift */,
+				89ED124B1C63F67B00ACB44D /* Store.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -195,9 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				897D5AC31C6296A800A93EF0 /* ToDo.swift in Sources */,
+				89ED124C1C63F67B00ACB44D /* Store.swift in Sources */,
+				89B79C681C63D3420056DE9F /* Additions.swift in Sources */,
+				897D5AC31C6296A800A93EF0 /* ToDoItem.swift in Sources */,
 				897D5AC71C629A3500A93EF0 /* ItemDo.swift in Sources */,
-				897D5AC51C62997800A93EF0 /* ItemStore.swift in Sources */,
 				1CA2F70D1C3C2B6400757A21 /* HomeViewController.swift in Sources */,
 				1CA2F7281C3DB2C200757A21 /* NewItemViewController.swift in Sources */,
 				1CA2F70B1C3C2B6400757A21 /* AppDelegate.swift in Sources */,
