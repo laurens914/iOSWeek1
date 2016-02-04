@@ -32,7 +32,7 @@ class NewItemViewController: UIViewController {
         let date = ""
         
         let task = ToDoItem(name: description, date: date)
-        // ItemStore.shared.addItem(task)
+        Store.shared.addItem(task)
         
         navigationController.popViewControllerAnimated(true)
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ToDoItem: NSCoding
+class ToDoItem: NSObject, NSCoding
 {
     let name: String
     let date: String
@@ -23,7 +23,7 @@ class ToDoItem: NSCoding
       self.moreInfo = moreInfo
       self.identifier = identifier
     }
-    @objc convenience required init (coder aDecoder: NSCoder)
+    convenience required init (coder aDecoder: NSCoder)
     {
         guard let name = aDecoder.decodeObjectForKey("name") as? String else { fatalError() }
         guard let date = aDecoder.decodeObjectForKey("date") as? String else { fatalError() }
@@ -32,7 +32,7 @@ class ToDoItem: NSCoding
         self.init(name: name, date: date, moreInfo: moreInfo, identifier: identifier)
         
     }
-    @objc func encodeWithCoder(aCoder: NSCoder)
+    func encodeWithCoder(aCoder: NSCoder)
     {
         aCoder.encodeObject(self.name, forKey: "name")
         aCoder.encodeObject(self.date, forKey: "date")

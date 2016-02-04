@@ -31,15 +31,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func configureCell(indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("todoCell", forIndexPath: indexPath)
         
-        //let checkList = ItemStore.shared.objectAtIndex(indexPath.row)
-        //cell.textLabel?.text = checkList?.moreInfo
+        let checkList = Store.shared.objectAtIndex(indexPath.row)
+        cell.textLabel?.text = checkList?.name
+        
         return cell
     }
     
     // MARK: UITableViewDataSource
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0// ItemStore.shared.count()
+        return Store.shared.count()
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -55,7 +56,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let selectedTask = indexPath.row
-            // ItemStore.shared.removeObjectAtIndexPath(selectedTask)
+            Store.shared.removeObjectAtIndexPath(selectedTask)
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         }
